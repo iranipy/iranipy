@@ -1,0 +1,31 @@
+name: ipynb documents renderer
+
+on:
+  push:
+    paths:
+      - '**.ipynb'
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: [3.8]
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v2
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python ipynb_docs_renderer.py install-dependencies
+      - name: convert ipynb documents to html
+        run: |
+          python ipynb_docs_renderer.py render
+      - name: commit and push changes
+        run: |
+          python ipynb_docs_renderer.py commit-push
