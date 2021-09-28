@@ -25,7 +25,7 @@ jobs:
           python projects/ipynb_docs_renderer/script/ipynb_docs_renderer.py install-dependencies
       - name: convert ipynb documents to html
         run: |
-          python projects/ipynb_docs_renderer/script/ipynb_docs_renderer.py render
+          python ipynb_docs_renderer.py render
       - name: commit and push changes
         run: |
-          python projects/ipynb_docs_renderer/script/ipynb_docs_renderer.py commit-push
+          python ipynb_docs_renderer.py commit-push
