@@ -5,10 +5,158 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>iranipy</title>
+
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+    <style>
+        html, body {
+            width: 100%;
+            height: 100%;
+            box-sizing: border-box;
+            overflow: hidden;
+            user-select: none;
+        }
+
+        body {
+            margin: 0;
+            background-color: black;
+        }
+
+        .root {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: white;
+        }
+
+        .background {
+            position: absolute;
+            display: block;
+            top: 0;
+            left: 0;
+            z-index: 0;
+        }
+
+        .root > img {
+            margin-top: -7%;
+            width: 100%;
+            z-index: 1;
+        }
+
+        .title {
+            z-index: 1;
+        }
+
+        .title > h1 {
+            margin: 0;
+            color: rgb(100, 100, 100);
+            font-size: 3rem;
+            text-align: center;
+            text-shadow: -4px 4px 2px rgb(50, 50, 50);
+            transition: all 0.2s;
+        }
+
+        .title:hover > h1 {
+            color: white;
+            transform: scale(1.3);
+        }
+
+        .list {
+            position: fixed;
+            bottom: 10px;
+            list-style-type: none;
+            padding: 0;
+            z-index: 1;
+        }
+
+        .list > li {
+            display: inline-block;
+        }
+
+        .list > li > a {
+            position: relative;
+            text-decoration: none;
+            margin: 30px;
+            color: rgb(100, 100, 100);
+            transition: color 0.2s;
+            font-size: 3em;
+        }
+
+        .list > li > a:hover {
+            color: white;
+        }
+
+        .list > li:not(:first-child) > a::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: -32px;
+            transform: translate(-50%, -50%);
+            width: 2px;
+            height: 80%;
+            background-color: rgba(255, 255, 255, 0.05);
+        }
+
+        @media screen and (min-width: 470px) {
+            .root > img {
+                width: 650px;
+            }
+        }
+
+        @media screen and (max-width: 470px) {
+            .list > li > a {
+                display: none;
+            }
+        }
+    </style>
 </head>
 <body>
-    <center>
-        <h1> صفحه اصلی ایرانی پای </h1>
-    </center>
+    <div class="root">
+        <img alt="iranipy" src="assets/img/logo-transparent.png" />
+        <div class="title">
+            <h1>
+                ایرانی پای
+            </h1>
+            <h1>
+                iranipy
+            </h1>
+        </div>
+        <ul class="list">
+            <li>
+                <a class="github" href="https://github.com/iranipy" target="_blank">
+                    <i class="fab fa-github"></i>
+                </a>
+            </li>
+            <li>
+                <a class="telegram" href="https://t.me/iranipy" target="_blank">
+                    <i class="fab fa-telegram"></i>
+                </a>
+            </li>
+            <li>
+                <a class="instagram" href="https://instagram.com/iranipy" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </li>
+            <li>
+                <a class="twitter" href="https://twitter.com/_iranipy" target="_blank">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <canvas class="background"></canvas>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.2/particles.min.js"></script>
+
+    <script>
+        window.onload = () => {
+            Particles.init({
+                selector: ".background",
+                color: "white",
+            });
+        };
+    </script>
 </body>
 </html>
