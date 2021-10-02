@@ -77,10 +77,14 @@
         .list > li > a {
             position: relative;
             text-decoration: none;
-            margin: 30px;
+            margin: 20px 30px 0px 30px;
             color: rgb(100, 100, 100);
             transition: color 0.2s;
             font-size: 3em;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
 
         .list > li > a:hover {
@@ -96,6 +100,16 @@
             width: 2px;
             height: 80%;
             background-color: rgba(255, 255, 255, 0.05);
+        }
+
+        .list > li > a > span {
+            font-size: 0.3em;
+            opacity: 0;
+            transition: opacity 0.2s;
+        }
+
+        .list > li > a:hover > span {
+            opacity: 1;
         }
 
         @media screen and (min-width: 470px) {
@@ -124,23 +138,27 @@
         </div>
         <ul class="list">
             <li>
-                <a class="github" href="https://github.com/iranipy" target="_blank">
+                <a title="github" href="https://github.com/iranipy" target="_blank">
                     <i class="fab fa-github"></i>
+                    <span>github</span>
                 </a>
             </li>
             <li>
-                <a class="telegram" href="https://t.me/iranipy" target="_blank">
+                <a title="telegram" href="https://t.me/iranipy" target="_blank">
                     <i class="fab fa-telegram"></i>
+                    <span>telegram</span>
                 </a>
             </li>
             <li>
-                <a class="instagram" href="https://instagram.com/iranipy" target="_blank">
+                <a title="instagram" href="https://instagram.com/iranipy" target="_blank">
                     <i class="fab fa-instagram"></i>
+                    <span>instagram</span>
                 </a>
             </li>
             <li>
-                <a class="twitter" href="https://twitter.com/_iranipy" target="_blank">
+                <a title="twitter" href="https://twitter.com/_iranipy" target="_blank">
                     <i class="fab fa-twitter"></i>
+                    <span>twitter</span>
                 </a>
             </li>
         </ul>
