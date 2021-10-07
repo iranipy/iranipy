@@ -1,8 +1,8 @@
 # Poetry sample project
 
 - [Usage](#usage)
-- [Articles on github page](#github_articles)
-- [Articles on virgool](#virgool_articles)
+- [Articles on github page](#articles-on-github-page)
+- [Articles on virgool](#articles-on-virgool)
 
 ## Usage
 

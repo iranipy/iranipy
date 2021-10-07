@@ -13,6 +13,7 @@ Iranipy consists of self-documenting python code with farsi ipython notebooks, w
 ## Projects
 
 - [IPYNB Docs Renderer](https://github.com/iranipy/iranipy/tree/main/projects/ipynb_docs_renderer)
+- [Poetry](https://github.com/iranipy/iranipy/tree/main/projects/poetry)
 
 ## Github page
 
