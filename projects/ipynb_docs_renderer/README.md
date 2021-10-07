@@ -1,12 +1,12 @@
 # Convert IPYNB files to HTML to be deployed on github-pages
 
 - [Usage](#usage)
-- [Articles on github page](#github_articles)
-- [Articles on virgool](#virgool_articles)
+- [Articles on github page](#articles-on-github-page)
+- [Articles on virgool](#articles-on-virgool)
 
 ## Usage
 
-You should put **YML** file in your repository's .github/workflows directory.
+You should put **YML** file in your repository's **.github/workflows** directory.
 
 You should put **script** file in repository's root directory.
 
