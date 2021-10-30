@@ -27,6 +27,8 @@ import pendulum
 
 def main():
     """This is main/entry function.
+
+    It contains `pendulum` sample code.
     """
     now = pendulum.now("Europe/Paris")
     now.in_timezone("America/Toronto")
