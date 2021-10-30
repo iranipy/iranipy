@@ -1,4 +1,4 @@
-# Simple DDoS attack script
+# Simple TCP Chat Client/Server
 
 - [Usage](#usage)
 - [Articles on github page](#articles-on-github-page)
