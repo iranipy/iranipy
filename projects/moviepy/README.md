@@ -40,4 +40,4 @@ You can find outputs in samples directory.
 
 ## Articles on virgool
 
-<!-- - [part-1](#) -->
+- [part-1](https://vrgl.ir/3xFpt)
