@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "audio_video"
+version = "0.1.0"
+description = ""
+authors = ["iranipy <info@iranipy.ir>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+moviepy = "^1.0.3"
+
+[tool.poetry.scripts]
+sample = 'audio_video.sample:main'
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
