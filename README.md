@@ -16,6 +16,7 @@ Iranipy consists of self-documenting python code with farsi ipython notebooks, w
 - [IPYNB Docs Renderer](https://github.com/iranipy/iranipy/tree/main/projects/ipynb_docs_renderer)
 - [Moviepy](https://github.com/iranipy/iranipy/tree/main/projects/moviepy)
 - [Poetry](https://github.com/iranipy/iranipy/tree/main/projects/poetry)
+- [Qr Code](https://github.com/iranipy/iranipy/tree/main/projects/qrcode)
 - [TCP Chat](https://github.com/iranipy/iranipy/tree/main/projects/tcp_chat)
 
 ## Github page
